@@ -1,0 +1,104 @@
+/* General Reset */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #f7f8fc, #e6ecf0);
+  color: #333;
+}
+
+/* Headings */
+.main-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+.main-title span {
+  color: #007bff;
+}
+
+/* Profile Page */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  border: 3px solid #007bff;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  color: #333;
+  margin-top: 10px;
+}
+
+.profile-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Resume Page */
+.resume-container {
+  background: white;
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.resume-container h2 {
+  color: #007bff;
+  margin-top: 25px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.resume-container p, .resume-container ul {
+  line-height: 1.6;
+}
+
+.resume-container ul {
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 25px;
+}

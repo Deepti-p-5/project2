@@ -1,0 +1,268 @@
+p<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fff;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #4a1db8;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffb3;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 5%;
+      background: url('https://i.ibb.co/BGk2sMz/paper-texture.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .content.show {
+      opacity: 1;
+    }
+
+    img {
+      width: 40%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transform: translateX(100px);
+      opacity: 0;
+      animation: slideIn 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 1.7;
+      color: #444;
+      font-size: 15px;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #4a1db8;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* For experience numbers */
+    .experience {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .exp-item {
+      width: 30%;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .exp-item:hover {
+      transform: scale(1.05);
+    }
+
+    .exp-item h3 {
+      font-size: 60px;
+      color: #00b36b;
+    }
+
+    /* Contact styling */
+    .contact-info {
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: #4a1db8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About me</a> |
+    <a href="#education">Education</a> |
+    <a href="#experience">Experience</a> |
+    <a href="#institution">Institution</a> |
+    <a href="#skills">Technical skill</a> |
+    <a href="#volunteer">Volunteer work</a> |
+    <a href="#contact">Get in touch</a>
+  </nav>
+
+  <!-- About Me -->
+  <section id="about">
+    <div class="content">
+      <h1>About Me</h1>
+      <h2>I’m Rachelle Beaudry</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit et lectus eu imperdiet.</p>
+      <p>Donec iaculis sapien euismod, pharetra eros vitae, pulvinar turpis. Vestibulum at dui sit amet leo accumsan pulvinar.</p>
+    </div>
+    <img src="https://i.ibb.co/MP0xXfk/woman-smiling.jpg" alt="About Me Image">
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="content">
+      <h1>Experience</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit et lectus eu imperdiet.</p>
+      <div class="experience">
+        <div class="exp-item">
+          <h3>1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="exp-item">
+          <h3>2</h3>
+          <p>Curabitur hendrerit et lectus eu imperdiet.</p>
+        </div>
+        <div class="exp-item">
+          <h3>3</h3>
+          <p>Donec iaculis sapien euismod, pharetra eros vitae.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institution -->
+  <section id="institution">
+    <img src="https://i.ibb.co/PrsPwpc/university-building.jpg" alt="Institution Image">
+    <div class="content">
+      <h1>Institution</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit et lectus eu imperdiet.</p>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills">
+    <div class="content">
+      <h1>Technical Skill</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit et lectus eu imperdiet.</p>
+      <p>Donec iaculis sapien euismod, pharetra eros vitae, pulvinar turpis.</p>
+    </div>
+    <img src="https://i.ibb.co/HTvv5Dc/women-coding.jpg" alt="Technical Skills">
+  </section>
+
+  <!-- Get In Touch -->
+  <section id="contact">
+    <img src="https://i.ibb.co/MP0xXfk/woman-smiling.jpg" alt="Contact Image">
+    <div class="content">
+      <h1>Get in Touch</h1>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:hello@reallygreatsite.com">hello@reallygreatsite.com</a></p>
+        <p><strong>Website:</strong> <a href="https://www.reallygreatsite.com">www.reallygreatsite.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+11234567890">123-456-7890</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thank You -->
+  <footer>
+    <h1>Thank You</h1>
+    <p>www.reallygreatsite.com</p>
+  </footer>
+
+  <script>
+    // Animate on scroll
+    const sections = document.querySelectorAll('.content, img');
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) section.classList.add('show');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f2f2f2; /* 🌟 Light Grey Background */
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #4a1db8;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffb3;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 5%;
+      background-color: #f2f2f2; /* Light grey section background */
+      position: relative;
+      overflow: hidden;
+    }
+
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .content.show {
+      opacity: 1;
+    }
+
+    img {
+      width: 40%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transform: translateX(100px);
+      opacity: 0;
+      animation: slideIn 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 1.7;
+      color: #444;
+      font-size: 15px;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #4a1db8;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* For experience numbers */
+    .experience {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .exp-item {
+      width: 30%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .exp-item:hover {
+      transform: scale(1.05);
+    }
+
+    .exp-item h3 {
+      font-size: 60px;
+      color: #00b36b;
+    }
+
+    /* Contact styling */
+    .contact-info {
+      margin-top: 20px;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: #4a1db8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About me</a> |
+	<a href="#institution">Institution</a> |
+    <a href="#skills">Technical skill</a> |
+	 <a href="#projects">Projects</a> |
+    <a href="#contact">Get in touch</a>
+  </nav>
+
+  <!-- About Me -->
+  <section id="about">
+    <div class="content">
+      <h1>A Glimse of Me</h1>
+      <h2>I’m Deepti Dattaram Palekar</h2>
+      <p><li>Motivated and curious Computer Science Engineering student with 
+	  a strong interest in emerging Al technologies. Eager to begin a professional career where 
+	  I can apply my foundational knowledge in Python and Al tools to solve real- world problems and grow as a 
+	  technology professional.</li></p>
+    </div>
+    <img src="profile.jpg" alt="About Me Image">
+  </section>
+
+
+  <!-- Institution -->
+  <section id="institution">
+    <img src="college.jpg" alt="Institution Image">
+    <div class="content">
+      <h1>Institution</h1>
+	  <p><li>Maratha Mandal Engineering College (MMEC) is a private engineering 
+	  institute located in Belagavi, Karnataka. It was established in 1997, is affiliated
+	  with Visvesvaraya Technological University (VTU), 
+	  and is approved by the All India Council for Technical Education (AICTE)</li></p>
+      <p><li>Address: R.S. No. 104, Halbhavi Village, P.O. New Vantmuri,
+	  Via-Kakati Belagavi - 591113, Karnataka, India</li>
+       <li>Phone: 0831-2925005, 0831-2416255</li>
+	   <p><a href="https://www.mmec.edu.in/">Maratha Mandal Engineering college Website</a>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills">
+     <img src="techs.jpg" alt="Technical Skills">
+    <div class="content">
+      <h1>Technical Skill</h1>
+      <p><li>Programming and Web Development: Languages like HTML, CSS, JavaScript, Python</li>
+	  <li>Front-End and Back-End Development.</li>
+<li>Data and Analytics: Data analysis, data science, database management, big data analysis.</li>
+Software and Tools:
+<li>Productivity Software: Microsoft Office Suite</li>
+<li>Project Management: Tools like Chatgpt, ChatBot, AIBolt and methodologies like Agile.</li>
+<li>Design: UX/UI design, graphic design, wireframing, visual design</li></p>
+ </div>
+  </section>
+ 
+
+<section id="projects">
+    <div class="content">
+      <h1>Projects</h1>
+      <p>These are the Projects I have done so far. And still more to be created and creatings</p>
+      <div class="experience">
+        <div class="exp-item">
+          <h3>1</h3>
+          <p>TIME-TABLE GENERATOR</p>
+        </div>
+        <div class="exp-item">
+          <h3>2</h3>
+          <p>GOOLE FORM, COLOUR CHANGING ANIMATION</p>
+        </div>
+        <div class="exp-item">
+          <h3>3</h3>
+          <p>MAGIC CUBE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get In Touch -->
+  <section id="contact">
+    <img src="contact.png" alt="Contact Image">
+    <div class="content">
+      <h1>Get in Touch</h1>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="deepikapalekar44@gmail.com">deepikapalekar44@gmail.com</a></p>
+        <p><strong>Website:</strong> <a href="https://www.reallygreatsite.com">www.reallygreatsite.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+918746080063">8746080063</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+  <div class="btn-container">
+  <button class="btn" onclick="openIndex()"><a href="index.html">Back to Profile</a></button>
+   </div>
+   <h1>Thank You</h1>
+</footer>
+  <!-- Thank You -->
+
+  <script>
+    // Animate on scroll
+    const sections = document.querySelectorAll('.content, img');
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) section.classList.add('show');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
+</html>
